@@ -4,21 +4,24 @@ import App from "./App.jsx";
 import "./index.css";
 import Layout from "./components/layout/Layout.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Dashboard from "./page/dashboard/Dashboard.jsx";
 import Static from "./page/static/Static.jsx";
 import User from "./page/users/User.jsx";
 import SignIn from "./page/sign-in/SignIn.jsx";
 import SignUp from "./page/sign-up/SignUp.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // errorElement: <ErrorPage />,
-
     children: [
       {
         path: "/",
+        element: <Navigate to="/dashboard" replace />,
+      },
+      {
+        path: "/home",
         element: <App />,
       },
       {
@@ -35,11 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/sign-in",
-        element: <SignIn/>,
+        element: <SignIn />,
       },
       {
         path: "/sign-up",
-        element: <SignUp/>,
+        element: <SignUp />,
       },
     ],
   },

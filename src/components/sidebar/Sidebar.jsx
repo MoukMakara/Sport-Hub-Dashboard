@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/SportHubLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChartLine,
-  faHouse,
-  faUser,
-  faRightToBracket,
-  faUserPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { RiDashboard3Fill } from "react-icons/ri";
+import { FaUser } from "react-icons/fa";
+import { FaSignInAlt } from "react-icons/fa";
+import { FaUserEdit } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
+
 import "flowbite";
 import SportHubLogo from "../../assets/SportHubLogo.png";
 
 export function Sidebar() {
+  
   return (
     <section className="relative max-w-screen-2xl mx-auto">
       <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
@@ -74,13 +74,13 @@ export function Sidebar() {
                       className="text-sm text-gray-900 dark:text-white"
                       role="admin"
                     >
-                      Neil Sims
+                      Sport Hub
                     </p>
                     <p
                       className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
                       role="admin"
                     >
-                      neil.sims@flowbite.com
+                      sporthub@gmail.com
                     </p>
                   </div>
                   <ul className="py-1" role="admin">
@@ -140,7 +140,7 @@ export function Sidebar() {
                 to="/dashboard"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <FontAwesomeIcon icon={faHouse} />
+                <RiDashboard3Fill />
                 <span className="ms-3">Dashboard</span>
               </Link>
             </li>
@@ -150,7 +150,7 @@ export function Sidebar() {
                 to="/static"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <FontAwesomeIcon icon={faChartLine} />
+                <FaChartBar />
                 <span className="flex-1 ms-3 whitespace-nowrap">Static</span>
               </Link>
             </li>
@@ -160,7 +160,7 @@ export function Sidebar() {
                 to="/users"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <FontAwesomeIcon icon={faUser} />
+                <FaUser />
                 <span className="flex-1 ms-3 whitespace-nowrap">Users</span>
               </Link>
             </li>
@@ -170,7 +170,7 @@ export function Sidebar() {
                 to="/sign-in"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <FontAwesomeIcon icon={faRightToBracket} />
+                <FaSignInAlt />
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign In</span>
               </Link>
             </li>
@@ -179,7 +179,7 @@ export function Sidebar() {
                 to="/sign-up"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <FontAwesomeIcon icon={faUserPlus} />
+                <FaUserEdit />
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
               </Link>
             </li>
